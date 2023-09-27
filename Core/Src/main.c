@@ -92,13 +92,19 @@ int main(void)
   MX_USART1_UART_Init();
   oled_init();
   /* USER CODE BEGIN 2 */
-    oled_test();
+  //oled_draw_line(20,60,20,40);
+  oled_writeram();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      for(uint8_t i=0;i<64;i++)
+      {
+          oled_newram();        //清空缓存
+          oled_draw_pixel(2*i,i);
+      }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

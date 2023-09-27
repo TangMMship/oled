@@ -4,9 +4,13 @@
 
 #include "oled.h"
 #include "i2c.h"
-
+#include "string.h"
 //从机设备地址
 #define oled_address 0x78
+
+uint8_t GRAM[8][128];
+
+
 
 //send 0x7a 0x00 +0x__ 是发指令  0x__是指令具体内容
 //send 0x7a 0x40 是发数据
@@ -28,6 +32,13 @@ void oled_senddata(uint8_t data)
     HAL_I2C_Master_Transmit(&hi2c1,oled_address,sendbuffer,2,HAL_MAX_DELAY);
 }
 
+/**
+  * @brief  OLED光标设置
+  * @param  x，y  y有8页  每页是128列和8行，指令0x10是发高4位 0x10中的1表示高位,0表示高位是多少，指令0x00是发低四位，同理  原理是将8位数据拆分为两个四位发送
+  * 例如
+  * 0x18 0x05  就是高位为1低位为5 对应0x85=133列
+  * @retval 无
+  */
 void OLED_SetCursor(uint8_t Y, uint8_t X)
 {
     oled_sendcmd(0xB0 | Y);					//设置Y位置
@@ -101,6 +112,56 @@ void oled_test()
     oled_sendcmd(0xb0);
     oled_sendcmd(0x00);
     oled_sendcmd(0x10);
-    uint8_t sentbuffer[2]={0x40,0xaa};
-    HAL_I2C_Master_Transmit(&hi2c1,oled_address,sentbuffer,2,HAL_MAX_DELAY);
+    uint8_t sentbuffer[]={0x40,0xff,0xff,0xff,0xff,0xff};
+    HAL_I2C_Master_Transmit(&hi2c1,oled_address,sentbuffer,6,HAL_MAX_DELAY);
+}
+
+/*
+ * 缓存内容清空
+ */
+void oled_newram()
+{
+    memset(GRAM,0,sizeof(GRAM));
+}
+
+/*void oled_writeram()的作用是将缓存的数据输出，如此只要对GRAM缓存操作即可
+ *
+ */
+void oled_writeram()
+{
+    uint8_t sendbuffer[129];
+    sendbuffer[0]=0x40;         //发数据指令
+    for(int j=0;j<8;j++)
+    {
+        for (int i = 0; i<128; i++)
+        {
+            sendbuffer[i+1]=GRAM[j][i];
+        }
+        oled_sendcmd(0xb0+j);   //跳到对应页
+        oled_sendcmd(0x02);     //从第二列开始写  屏幕问题
+        oled_sendcmd(0x10);
+        HAL_I2C_Master_Transmit(&hi2c1,oled_address,sendbuffer,sizeof (sendbuffer),HAL_MAX_DELAY);
+    }
+
+}
+
+void oled_draw_pixel(uint8_t x,uint8_t y)
+{
+    uint8_t page=0;
+    uint8_t row=0;
+    if(x<128&&y<64)
+    {
+        page=y/8;       //第y行在第几页
+        row=y%8;        //第y行在第n页的第几行  如此便获得具体的y坐标在屏幕上
+        GRAM[page][x]|=0x01<<row;  //每页有八行，将对应行置为一
+    }
+}
+
+void oled_draw_line(uint8_t x1,uint8_t x2,uint8_t y1,uint8_t y2)
+{
+    for(int x=x1;x<x2;x++)
+        for(int y=y1;y<y2;y++)
+        {
+            oled_draw_pixel(x,y);
+        }
 }
