@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "oled.h"
+#include "font.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,17 +96,19 @@ int main(void)
   //oled_draw_line(20,60,20,40);
   //oled_writeram();
   /* USER CODE END 2 */
-
+  oled_newram();
+  oled_drawimage(10,10,&dsImg,OLED_COLOR_NORMAL);
+  oled_writeram();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-      for(uint8_t i=0;i<64;i++)
-      {
-          oled_newram();        //清空缓存
-          oled_draw_pixel(2*i,i);
-          oled_writeram();
-      }
+//      for(uint8_t i=0;i<64;i++)
+//      {
+//          oled_newram();        //清空缓存
+//          oled_draw_pixel(2*i,i);
+//          oled_writeram();
+//      }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

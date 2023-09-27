@@ -1,7 +1,7 @@
 //
 // Created by TangM on 2023/9/26.
 //
-
+#include "font.h"
 #include "oled.h"
 #include "i2c.h"
 #include "string.h"
@@ -164,4 +164,156 @@ void oled_draw_line(uint8_t x1,uint8_t x2,uint8_t y1,uint8_t y2)
         {
             oled_draw_pixel(x,y);
         }
+}
+
+/***********************        图形库             **********************************************/
+
+
+/**
+ * @brief 设置显存中一字节数据的某几位
+ * @param page 页地址
+ * @param column 列地址
+ * @param data 数据
+ * @param start 起始位
+ * @param end 结束位
+ * @param color 颜色
+ * @note 此函数将显存中的某一字节的第start位到第end位设置为与data相同
+ * @note start和end的范围为0-7, start必须小于等于end
+ * @note 此函数与OLED_SetByte_Fine的区别在于此函数只能设置显存中的某一真实字节
+ */
+void OLED_SetByte_Fine(uint8_t page, uint8_t column, uint8_t data, uint8_t start, uint8_t end, OLED_ColorMode color) {
+    static uint8_t temp;
+    if (page >= OLED_PAGE || column >= OLED_COLUMN) return;
+    if (color) data = ~data;
+
+    temp = data | (0xff << (end + 1)) | (0xff >> (8 - start));
+    GRAM[page][column] &= temp;
+    temp = data & ~(0xff << (end + 1)) & ~(0xff >> (8 - start));
+    GRAM[page][column] |= temp;
+    // 使用OLED_SetPixel实现
+    // for (uint8_t i = start; i <= end; i++) {
+    //   OLED_SetPixel(column, page * 8 + i, !((data >> i) & 0x01));
+    // }
+}
+
+/**
+ * @brief 设置显存中的一字节数据的某几位
+ * @param x 横坐标
+ * @param y 纵坐标
+ * @param data 数据
+ * @param len 位数
+ * @param color 颜色
+ * @note 此函数将显存中从(x,y)开始向下数len位设置为与data相同
+ * @note len的范围为1-8
+ * @note 此函数与OLED_SetByte_Fine的区别在于此函数的横坐标和纵坐标是以像素为单位的, 可能出现跨两个真实字节的情况(跨页)
+ */
+void OLED_SetBits_Fine(uint8_t x, uint8_t y, uint8_t data, uint8_t len, OLED_ColorMode color) {
+    uint8_t page = y / 8;
+    uint8_t bit = y % 8;
+    if (bit + len > 8) {
+        OLED_SetByte_Fine(page, x, data << bit, bit, 7, color);
+        OLED_SetByte_Fine(page + 1, x, data >> (8 - bit), 0, len + bit - 1 - 8, color);
+    } else {
+        OLED_SetByte_Fine(page, x, data << bit, bit, bit + len - 1, color);
+    }
+    // 使用OLED_SetPixel实现
+    // for (uint8_t i = 0; i < len; i++) {
+    //   OLED_SetPixel(x, y + i, !((data >> i) & 0x01));
+    // }
+}
+
+/**
+ * @brief 设置显存中的一字节数据
+ * @param page 页地址
+ * @param column 列地址
+ * @param data 数据
+ * @param color 颜色
+ * @note 此函数将显存中的某一字节设置为data的值
+ */
+void OLED_SetByte(uint8_t page, uint8_t column, uint8_t data, OLED_ColorMode color) {
+    if (page >= OLED_PAGE || column >= OLED_COLUMN) return;
+    if (color) data = ~data;
+    GRAM[page][column] = data;
+}
+
+
+/**
+ * @brief 设置显存中一字节长度的数据
+ * @param x 横坐标
+ * @param y 纵坐标
+ * @param data 数据
+ * @param color 颜色
+ * @note 此函数将显存中从(x,y)开始向下数8位设置为与data相同
+ * @note 此函数与OLED_SetByte的区别在于此函数的横坐标和纵坐标是以像素为单位的, 可能出现跨两个真实字节的情况(跨页)
+ */
+void OLED_SetBits(uint8_t x, uint8_t y, uint8_t data, OLED_ColorMode color) {
+    uint8_t page = y / 8;
+    uint8_t bit = y % 8;
+    OLED_SetByte_Fine(page, x, data << bit, bit, 7, color);
+    if (bit) {
+        OLED_SetByte_Fine(page + 1, x, data >> (8 - bit), 0, bit - 1, color);       //跨页
+    }
+}
+
+
+/**
+ * @brief 设置一块显存区域
+ * @param x 起始横坐标
+ * @param y 起始纵坐标
+ * @param data 数据的起始地址
+ * @param w 宽度
+ * @param h 高度
+ * @param color 颜色
+ * @note 此函数将显存中从(x,y)开始的w*h个像素设置为data中的数据
+ * @note data的数据应该采用列行式排列
+ */
+void OLED_SetBlock(uint8_t x, uint8_t y, const uint8_t *data, uint8_t w, uint8_t h, OLED_ColorMode color) {
+    uint8_t fullRow = h / 8; // 完整的行数
+    uint8_t partBit = h % 8; // 不完整的字节中的有效位数
+    for (uint8_t i = 0; i < w; i++) {
+        for (uint8_t j = 0; j < fullRow; j++) {
+            OLED_SetBits(x + i, y + j * 8, data[i + j * w], color);
+        }
+    }
+    if (partBit) {
+        uint16_t fullNum = w * fullRow; // 完整的字节数
+        for (uint8_t i = 0; i < w; i++) {
+            OLED_SetBits_Fine(x + i, y + (fullRow * 8), data[fullNum + i], partBit, color);
+        }
+    }
+    // 使用OLED_SetPixel实现
+    // for (uint8_t i = 0; i < w; i++) {
+    //   for (uint8_t j = 0; j < h; j++) {
+    //     for (uint8_t k = 0; k < 8; k++) {
+    //       if (j * 8 + k >= h) break; // 防止越界(不完整的字节
+    //       OLED_SetPixel(x + i, y + j * 8 + k, !((data[i + j * w] >> k) & 0x01));
+    //     }
+    //   }
+    // }
+}
+
+/**
+ * @brief 绘制一张图片
+ * @param x 起始点横坐标
+ * @param y 起始点纵坐标
+ * @param img 图片
+ * @param color 颜色
+ */
+void oled_drawimage(uint8_t x, uint8_t y, const Image *img, OLED_ColorMode color) {
+    OLED_SetBlock(x, y, img->data, img->w, img->h, color);
+}
+
+
+
+void oled_draw_image(uint8_t x,uint8_t y,uint8_t* image,uint8_t sizex,uint8_t sizey)
+{
+    uint8_t page=0;
+    for(int j=0;j<sizey/8;j++)
+    {
+        for(int i=0;i<sizex;i++)
+        {
+            page=sizey/8;       //第y行在第几页
+            GRAM[page][i+x]=image[i+j*sizex];
+        }
+    }
 }
