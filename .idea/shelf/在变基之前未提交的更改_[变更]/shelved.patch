@@ -1,0 +1,65 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"CMakeRunConfigurationManager\" shouldGenerate=\"true\" shouldDeleteObsolete=\"true\">\r\n    <generated>\r\n      <config projectName=\"oled\" targetName=\"oled.elf\" />\r\n    </generated>\r\n  </component>\r\n  <component name=\"CMakeSettings\">\r\n    <configurations>\r\n      <configuration PROFILE_NAME=\"Debug\" ENABLED=\"true\" CONFIG_NAME=\"Debug\" />\r\n    </configurations>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"4742f956-bec7-4cf5-a61f-9f2fc9c779e5\" name=\"变更\" comment=\"oled_iic_ssd1315\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Inc/oled.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Inc/oled.h\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Src/main.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Src/main.c\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Src/oled.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Src/oled.c\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ClangdSettings\">\r\n    <option name=\"formatViaClangd\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"CMakeBuildProfile:Debug\" />\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectApplicationVersion\">\r\n    <option name=\"ide\" value=\"CLion\" />\r\n    <option name=\"majorVersion\" value=\"2021\" />\r\n    <option name=\"minorVersion\" value=\"3.4\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2VvuHdwUVgUkeOfUAGTy8EZJ8eB\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.cidr.known.project.marker\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"cf.first.check.clang-format\" value=\"false\" />\r\n    <property name=\"cidr.known.project.marker\" value=\"true\" />\r\n    <property name=\"cmake.loaded.for.project\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"com.jetbrains.cidr.embedded.config\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"OpenOCD 下载并运行.OCD oled\">\r\n    <configuration default=\"true\" type=\"CLionExternalRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" ELEVATE=\"false\" USE_EXTERNAL_CONSOLE=\"false\" PASS_PARENT_ENVS_2=\"true\">\r\n      <method v=\"2\">\r\n        <option name=\"CLION.EXTERNAL.BUILD\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"oled.elf\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" ELEVATE=\"false\" USE_EXTERNAL_CONSOLE=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"oled\" TARGET_NAME=\"oled.elf\" CONFIG_NAME=\"Debug\" RUN_TARGET_PROJECT_NAME=\"oled\" RUN_TARGET_NAME=\"oled.elf\">\r\n      <method v=\"2\">\r\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"OCD oled\" type=\"com.jetbrains.cidr.embedded.openocd.conf.type\" factoryName=\"com.jetbrains.cidr.embedded.openocd.conf.factory\" REDIRECT_INPUT=\"false\" ELEVATE=\"false\" USE_EXTERNAL_CONSOLE=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"oled\" TARGET_NAME=\"oled.elf\" CONFIG_NAME=\"Debug\" version=\"1\" RUN_TARGET_PROJECT_NAME=\"oled\" RUN_TARGET_NAME=\"oled.elf\">\r\n      <openocd version=\"1\" gdb-port=\"3333\" telnet-port=\"4444\" board-config=\"E:\\workspace\\clion\\CLionProjects\\oled\\stm32f103.cfg\" reset-type=\"INIT\" download-type=\"UPDATED_ONLY\">\r\n        <debugger kind=\"GDB\" isBundled=\"true\" />\r\n      </openocd>\r\n      <method v=\"2\">\r\n        <option name=\"CLION.COMPOUND.BUILD\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"CMake 应用程序.oled.elf\" />\r\n      <item itemvalue=\"OpenOCD 下载并运行.OCD oled\" />\r\n    </list>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"应用程序级\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"默认任务\">\r\n      <changelist id=\"4742f956-bec7-4cf5-a61f-9f2fc9c779e5\" name=\"变更\" comment=\"\" />\r\n      <created>1695728788989</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1695728788989</updated>\r\n      <workItem from=\"1695728809473\" duration=\"2924000\" />\r\n      <workItem from=\"1695776903384\" duration=\"1233000\" />\r\n      <workItem from=\"1695794907638\" duration=\"4098000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"oled_iic_ssd1315\">\r\n      <created>1695729613394</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695729613394</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"oled_iic_ssd1315\">\r\n      <created>1695733392572</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695733392572</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"oled_iic_ssd1315\">\r\n      <created>1695795991621</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695795991621</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"oled_iic_ssd1315\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"oled_iic_ssd1315\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -14,11 +14,8 @@
+     </configurations>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="4742f956-bec7-4cf5-a61f-9f2fc9c779e5" name="变更" comment="oled_iic_ssd1315">
++    <list default="true" id="4742f956-bec7-4cf5-a61f-9f2fc9c779e5" name="变更" comment="oled_iic_ssd1315&#10;缓存写像素点示例">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oled.h" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Src/oled.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/oled.c" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -95,7 +92,7 @@
+       <updated>1695728788989</updated>
+       <workItem from="1695728809473" duration="2924000" />
+       <workItem from="1695776903384" duration="1233000" />
+-      <workItem from="1695794907638" duration="4098000" />
++      <workItem from="1695794907638" duration="5011000" />
+     </task>
+     <task id="LOCAL-00001" summary="oled_iic_ssd1315">
+       <created>1695729613394</created>
+@@ -118,7 +115,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1695795991621</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="oled_iic_ssd1315">
++      <created>1695799276217</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1695799276217</updated>
++    </task>
++    <task id="LOCAL-00005" summary="oled_iic_ssd1315&#10;缓存写像素点示例">
++      <created>1695799353266</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1695799353266</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -137,6 +148,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="oled_iic_ssd1315" />
+-    <option name="LAST_COMMIT_MESSAGE" value="oled_iic_ssd1315" />
++    <MESSAGE value="oled_iic_ssd1315&#10;缓存写像素点示例" />
++    <option name="LAST_COMMIT_MESSAGE" value="oled_iic_ssd1315&#10;缓存写像素点示例" />
+   </component>
+ </project>
+\ No newline at end of file
