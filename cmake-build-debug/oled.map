@@ -1383,39 +1383,39 @@ LOAD e:/workspace/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-e
 LOAD e:/workspace/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 LOAD e:/workspace/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a
 
-.debug_info     0x00000000     0xca4f
+.debug_info     0x00000000     0xca4b
  .debug_info    0x00000000      0x1b6 CMakeFiles/oled.elf.dir/Core/Src/gpio.c.obj
  .debug_info    0x000001b6      0x8a4 CMakeFiles/oled.elf.dir/Core/Src/i2c.c.obj
- .debug_info    0x00000a5a      0x3cb CMakeFiles/oled.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00000e25      0xc1b CMakeFiles/oled.elf.dir/Core/Src/oled.c.obj
- .debug_info    0x00001a40      0x17c CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_info    0x00001bbc      0x130 CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_info    0x00001cec      0x248 CMakeFiles/oled.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_info    0x00001f34      0x855 CMakeFiles/oled.elf.dir/Core/Src/usart.c.obj
- .debug_info    0x00002789       0x22 CMakeFiles/oled.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
- .debug_info    0x000027ab      0x7a8 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_info    0x00002f53      0xd8a CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_info    0x00003cdd      0x66f CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_info    0x0000434c     0x3ab6 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
- .debug_info    0x00007e02      0xa3b CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_info    0x0000883d     0x4212 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_info    0x00000a5a      0x3c7 CMakeFiles/oled.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x00000e21      0xc1b CMakeFiles/oled.elf.dir/Core/Src/oled.c.obj
+ .debug_info    0x00001a3c      0x17c CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_info    0x00001bb8      0x130 CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_info    0x00001ce8      0x248 CMakeFiles/oled.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_info    0x00001f30      0x855 CMakeFiles/oled.elf.dir/Core/Src/usart.c.obj
+ .debug_info    0x00002785       0x22 CMakeFiles/oled.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_info    0x000027a7      0x7a8 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_info    0x00002f4f      0xd8a CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_info    0x00003cd9      0x66f CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_info    0x00004348     0x3ab6 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
+ .debug_info    0x00007dfe      0xa3b CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_info    0x00008839     0x4212 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
 
-.debug_abbrev   0x00000000     0x1992
+.debug_abbrev   0x00000000     0x199d
  .debug_abbrev  0x00000000       0xbf CMakeFiles/oled.elf.dir/Core/Src/gpio.c.obj
  .debug_abbrev  0x000000bf      0x1c1 CMakeFiles/oled.elf.dir/Core/Src/i2c.c.obj
- .debug_abbrev  0x00000280      0x17f CMakeFiles/oled.elf.dir/Core/Src/main.c.obj
- .debug_abbrev  0x000003ff      0x239 CMakeFiles/oled.elf.dir/Core/Src/oled.c.obj
- .debug_abbrev  0x00000638       0xbf CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_abbrev  0x000006f7       0x7e CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_abbrev  0x00000775      0x13e CMakeFiles/oled.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_abbrev  0x000008b3      0x1c8 CMakeFiles/oled.elf.dir/Core/Src/usart.c.obj
- .debug_abbrev  0x00000a7b       0x12 CMakeFiles/oled.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
- .debug_abbrev  0x00000a8d      0x1f4 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_abbrev  0x00000c81      0x341 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_abbrev  0x00000fc2      0x1e6 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_abbrev  0x000011a8      0x293 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
- .debug_abbrev  0x0000143b      0x27a CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_abbrev  0x000016b5      0x2dd CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_abbrev  0x00000280      0x18a CMakeFiles/oled.elf.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x0000040a      0x239 CMakeFiles/oled.elf.dir/Core/Src/oled.c.obj
+ .debug_abbrev  0x00000643       0xbf CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_abbrev  0x00000702       0x7e CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_abbrev  0x00000780      0x13e CMakeFiles/oled.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_abbrev  0x000008be      0x1c8 CMakeFiles/oled.elf.dir/Core/Src/usart.c.obj
+ .debug_abbrev  0x00000a86       0x12 CMakeFiles/oled.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_abbrev  0x00000a98      0x1f4 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_abbrev  0x00000c8c      0x341 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_abbrev  0x00000fcd      0x1e6 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_abbrev  0x000011b3      0x293 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
+ .debug_abbrev  0x00001446      0x27a CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_abbrev  0x000016c0      0x2dd CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
 
 .debug_aranges  0x00000000      0x8f0
  .debug_aranges
@@ -1466,22 +1466,22 @@ LOAD e:/workspace/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-e
  .debug_ranges  0x00000650       0xa0 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
  .debug_ranges  0x000006f0      0x210 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
 
-.debug_line     0x00000000     0xd10e
+.debug_line     0x00000000     0xd10a
  .debug_line    0x00000000      0x1a3 CMakeFiles/oled.elf.dir/Core/Src/gpio.c.obj
  .debug_line    0x000001a3      0x353 CMakeFiles/oled.elf.dir/Core/Src/i2c.c.obj
- .debug_line    0x000004f6      0x39e CMakeFiles/oled.elf.dir/Core/Src/main.c.obj
- .debug_line    0x00000894      0x526 CMakeFiles/oled.elf.dir/Core/Src/oled.c.obj
- .debug_line    0x00000dba      0x1a4 CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_line    0x00000f5e      0x1c3 CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_line    0x00001121      0x274 CMakeFiles/oled.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_line    0x00001395      0x36d CMakeFiles/oled.elf.dir/Core/Src/usart.c.obj
- .debug_line    0x00001702       0xa9 CMakeFiles/oled.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
- .debug_line    0x000017ab      0x5a8 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_line    0x00001d53      0x68d CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_line    0x000023e0      0x635 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_line    0x00002a15     0x566a CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
- .debug_line    0x0000807f      0xc72 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_line    0x00008cf1     0x441d CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_line    0x000004f6      0x39a CMakeFiles/oled.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00000890      0x526 CMakeFiles/oled.elf.dir/Core/Src/oled.c.obj
+ .debug_line    0x00000db6      0x1a4 CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_line    0x00000f5a      0x1c3 CMakeFiles/oled.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_line    0x0000111d      0x274 CMakeFiles/oled.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_line    0x00001391      0x36d CMakeFiles/oled.elf.dir/Core/Src/usart.c.obj
+ .debug_line    0x000016fe       0xa9 CMakeFiles/oled.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_line    0x000017a7      0x5a8 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_line    0x00001d4f      0x68d CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_line    0x000023dc      0x635 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_line    0x00002a11     0x566a CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c.obj
+ .debug_line    0x0000807b      0xc72 CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_line    0x00008ced     0x441d CMakeFiles/oled.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
 
 .debug_str      0x00000000     0x2b2c
  .debug_str     0x00000000      0x1ec CMakeFiles/oled.elf.dir/Core/Src/gpio.c.obj
