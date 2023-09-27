@@ -93,7 +93,7 @@ int main(void)
   oled_init();
   /* USER CODE BEGIN 2 */
   //oled_draw_line(20,60,20,40);
-  oled_writeram();
+  //oled_writeram();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,6 +104,7 @@ int main(void)
       {
           oled_newram();        //清空缓存
           oled_draw_pixel(2*i,i);
+          oled_writeram();
       }
     /* USER CODE END WHILE */
 
