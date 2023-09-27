@@ -16,7 +16,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4742f956-bec7-4cf5-a61f-9f2fc9c779e5" name="变更" comment="oled_iic_ssd1315">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oled.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/oled.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/oled.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-386f86ddd0a872cf364f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-09-26T11-52-15-0116.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-oled.elf-Debug-97537c9202036e2bade4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +97,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695728788989</updated>
-      <workItem from="1695728809473" duration="2532000" />
+      <workItem from="1695728809473" duration="2924000" />
+      <workItem from="1695776903384" duration="1233000" />
+      <workItem from="1695794907638" duration="1022000" />
     </task>
     <task id="LOCAL-00001" summary="oled_iic_ssd1315">
       <created>1695729613394</created>
@@ -100,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695729613394</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="oled_iic_ssd1315">
+      <created>1695733392572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695733392572</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
