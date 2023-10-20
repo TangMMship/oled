@@ -93,16 +93,33 @@ int main(void)
   MX_USART1_UART_Init();
   oled_init();
   /* USER CODE BEGIN 2 */
-  //oled_draw_line(20,60,20,40);
-  //oled_writeram();
+
   /* USER CODE END 2 */
+
+  /*绘图实验
   oled_newram();
   oled_drawimage(10,10,&dsImg,OLED_COLOR_NORMAL);
-  oled_writeram();
+  oled_writeram(GRAM);
+   */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      oled_newram();
+      oled_drawrectangle(20,10,50,30,0);
+      oled_writeram(GRAM);
+      HAL_Delay(1000);
+      for(int i=0;i<20;i++){
+          oled_newram();
+          oled_drawrectangle(20,10+i,50,30+i,0);
+          oled_writeram(GRAM);
+          HAL_Delay(10);
+      }
+      oled_newram();
+      oled_drawrectangle(20,30,50,50,0);
+      oled_writeram(GRAM);
+      HAL_Delay(1000);
 //      for(uint8_t i=0;i<64;i++)
 //      {
 //          oled_newram();        //清空缓存

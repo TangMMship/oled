@@ -14,19 +14,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4742f956-bec7-4cf5-a61f-9f2fc9c779e5" name="变更" comment="oled_iic_ssd1315&#10;缓存写像素点示例">
+    <list default="true" id="4742f956-bec7-4cf5-a61f-9f2fc9c779e5" name="变更" comment="oled_iic_ssd1315&#10;缓存写图片">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/oled.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oled.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/oled.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/oled.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-47c9ead00950c7bd2d31.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-09-27T06-18-08-0758.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-oled.elf-Debug-a4caf4f2aea149cc968d.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oled.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oled.elf.dir/Core/Src/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oled.elf.dir/Core/Src/oled.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oled.elf.dir/Core/Src/oled.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/oled.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/oled.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/oled.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/oled.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/oled.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/oled.hex" afterDir="false" />
@@ -67,6 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
@@ -79,11 +77,6 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.cidr.embedded.config" />
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.OCD oled">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="oled.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="oled" TARGET_NAME="oled.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="oled" RUN_TARGET_NAME="oled.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -113,7 +106,11 @@
       <workItem from="1695728809473" duration="2924000" />
       <workItem from="1695776903384" duration="1233000" />
       <workItem from="1695794907638" duration="1022000" />
-      <workItem from="1695822681423" duration="3168000" />
+      <workItem from="1695822681423" duration="3477000" />
+      <workItem from="1695910636212" duration="1213000" />
+      <workItem from="1696147383888" duration="109000" />
+      <workItem from="1697805678046" duration="3974000" />
+      <workItem from="1697812085093" duration="764000" />
     </task>
     <task id="LOCAL-00001" summary="oled_iic_ssd1315">
       <created>1695729613394</created>
@@ -157,7 +154,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695807073326</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="oled_iic_ssd1315&#10;缓存写像素点示例">
+      <created>1695826150728</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695826150728</updated>
+    </task>
+    <task id="LOCAL-00008" summary="oled_iic_ssd1315&#10;缓存写图片">
+      <created>1695826167291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695826167291</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +215,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="oled_iic_ssd1315" />
     <MESSAGE value="oled_iic_ssd1315&#10;缓存写像素点示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="oled_iic_ssd1315&#10;缓存写像素点示例" />
+    <MESSAGE value="oled_iic_ssd1315&#10;缓存写图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="oled_iic_ssd1315&#10;缓存写图片" />
   </component>
 </project>

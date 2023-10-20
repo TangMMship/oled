@@ -8,13 +8,12 @@
 //从机设备地址
 #define oled_address 0x78
 
-uint8_t GRAM[8][128];
+uint8_t GRAM[8][128];       //为什么要头文件和源文件一起声明
 
 
 
 //send 0x7a 0x00 +0x__ 是发指令  0x__是指令具体内容
 //send 0x7a 0x40 是发数据
-
 
 void oled_sendcmd(uint8_t cmd)
 {
@@ -127,7 +126,7 @@ void oled_newram()
 /*void oled_writeram()的作用是将缓存的数据输出，如此只要对GRAM缓存操作即可
  *
  */
-void oled_writeram()
+void oled_writeram(uint8_t GRAM[8][128])
 {
     uint8_t sendbuffer[129];
     sendbuffer[0]=0x40;         //发数据指令
@@ -153,7 +152,7 @@ void oled_draw_pixel(uint8_t x,uint8_t y)
     {
         page=y/8;       //第y行在第几页
         row=y%8;        //第y行在第n页的第几行  如此便获得具体的y坐标在屏幕上
-        GRAM[page][x]|=0x01<<row;  //每页有八行，将对应行置为一
+        GRAM[page][x]|=0x01<<row;  //每页有八行，将对应行和对应的x列结合得到点的坐标，将其置为一
     }
 }
 
@@ -305,15 +304,102 @@ void oled_drawimage(uint8_t x, uint8_t y, const Image *img, OLED_ColorMode color
 
 
 
-void oled_draw_image(uint8_t x,uint8_t y,uint8_t* image,uint8_t sizex,uint8_t sizey)
-{
-    uint8_t page=0;
-    for(int j=0;j<sizey/8;j++)
-    {
-        for(int i=0;i<sizex;i++)
-        {
-            page=sizey/8;       //第y行在第几页
-            GRAM[page][i+x]=image[i+j*sizex];
+//void oled_draw_image(uint8_t x,uint8_t y,uint8_t* image,uint8_t sizex,uint8_t sizey)
+//{
+//    uint8_t page=0;
+//    for(int j=0;j<sizey/8;j++)
+//    {
+//        for(int i=0;i<sizex;i++)
+//        {
+//            page=sizey/8;       //第y行在第几页
+//            GRAM[page][i+x]=image[i+j*sizex];
+//        }
+//    }
+//}
+/*
+ * 缓存复制，多缓存结构，把cache的内容拷贝到cached上
+ */
+
+/**
+ * @brief 画一条直线
+ *
+ * @param x0 起点X坐标 [0,127]
+ * @param y0 起点Y坐标 [0,63]
+ * @param x1 终点X坐标 [0,127]
+ * @param y1 终点Y坐标 [0,63]
+ * @param mode 颜色模式
+*/
+void oled_drawline(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, OLED_ColorMode mode) {
+    int xerr = 0, yerr = 0, delta_x, delta_y, distance;
+    int incx, incy, uRow, uCol;
+    delta_x = x1 - x0; //计算坐标增量
+    delta_y = y1 - y0;
+    uRow = x0;//画线起点坐标
+    uCol = y0;
+    if (delta_x > 0) {
+        incx = 1;
+    }
+    else if (delta_x == 0) {
+        incx = 0;
+    }
+    else {
+        incx = -1;
+        delta_x = -delta_x;
+    }
+    if (delta_y > 0) {
+        incy = 1;
+    }
+    else if (delta_y == 0) {
+        incy = 0;
+    }
+    else {
+        incy = -1;
+        delta_y = -delta_y;
+    }
+    if (delta_x > delta_y) {
+        distance = delta_x;
+    }
+    else {
+        distance = delta_y;
+    }
+    for (int t = 0; t <= distance + 1; t++) {
+        oled_draw_pixel(uRow, uCol);
+        xerr += delta_x;
+        yerr += delta_y;
+        if (xerr > distance) {
+            xerr -= distance;
+            uRow += incx;
+        }
+        if (yerr > distance) {
+            yerr -= distance;
+            uCol += incy;
         }
     }
+}
+
+
+
+/**
+ * @brief 画一个空心的矩形
+ *
+ * @param x0 左端点X坐标 [0,127]
+ * @param y0 上端点Y坐标 [0,63]
+ * @param x1 右端点X坐标 [0,127]
+ * @param y1 下端点Y坐标 [0,63]
+ * @param mode 颜色模式
+*/
+void oled_drawrectangle(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, OLED_ColorMode mode) {
+    // 判断输入参数是否合理
+    if (x0 >= x1 || y0 >= y1) {
+        return;
+    }
+    oled_drawline(x0, y0, x1, y0, mode);
+    oled_drawline(x0, y1, x1, y1, mode);
+    oled_drawline(x0, y0, x0, y1, mode);
+    oled_drawline(x1, y0, x1, y1, mode);
+}
+
+void cache_copy(uint8_t cache,uint8_t cached)
+{
+    memcpy(cached, cache , sizeof(cache));
 }
